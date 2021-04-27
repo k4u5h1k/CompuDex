@@ -10,9 +10,12 @@ public class Java {
 		Scanner in = new Scanner(System.in);
 
 		int[] a = new int[2];
-		for(int i=0; i<2; i++)
+		for(int i=0; i<2; i++) {
+			System.out.print("Enter number : ");
 			a[i] = in.nextInt();
+		}
 
+		System.out.print("Enter operator : ");
 		char op = in.next().charAt(0);
 		boolean flag = true;
 		int result = 0;
