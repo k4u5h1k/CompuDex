@@ -13,23 +13,14 @@
 
 
             invalid = false;
-            if (operator == '+'){
+            if (operator == '+')
                 result = arr[0] + arr[1]
-            }
-            else if(operator == '*'){
+            else if(operator == '*')
                 result = arr[0] * arr[1]
-            }
-            else if(operator == '-'){
-                if(arr[0] >= arr[1]){
-                    result = arr[0] - arr[1]
-                }
-                else{
-                    result = arr[1] - arr[0]
-                }
-            }
-            else if(operator == '/'){
+            else if(operator == '-')
+                result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
+            else if(operator == '/')
                 result = arr[0] / arr[1]
-            }
             else{
                 print('This operator has not been included.')
                 invalid = true

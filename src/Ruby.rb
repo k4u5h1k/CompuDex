@@ -17,11 +17,7 @@ def main()
   elsif operator == '*'
     result = arr[0] * arr[1]
   elsif operator == '-'
-    if arr[0] >= arr[1]
-        result = arr[0] - arr[1]
-    else
-        result = arr[1] - arr[0]
-    end
+    result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
   elsif operator == '/'
     result = arr[0] / arr[1]
   else

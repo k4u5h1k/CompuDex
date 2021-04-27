@@ -1,14 +1,15 @@
+// This is an example of the C++ language
+
 #include<iostream>
 #include <fstream>
 using namespace std;
 
-// This is an example of the C++ language
 int main(){
     int arr[2];
     
     int num;
     for(int i=0;i<2;i++){
-        cout<<"Enter number "<<i<<endl;
+        cout<<"Enter number "<<i+1<<endl;
         cin>>num;
         arr[i] = num;
     }
@@ -23,12 +24,8 @@ int main(){
         result = arr[0] + arr[1];
     else if(op == '*')
         result = arr[0] * arr[1];
-    else if(op == '-'){
-        if(arr[0] >= arr[1])
-            result = arr[0] - arr[1];
-        else
-            result = arr[1] - arr[0];
-    }
+    else if(op == '-')
+        result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
     else if(op == '/')
         result = arr[0] / arr[1];
     else{

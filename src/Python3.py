@@ -15,10 +15,7 @@ def main():
     elif operator == '*':
         result = arr[0] * arr[1]
     elif operator == '-':
-        if arr[0] >= arr[1]:
-            result = arr[0] - arr[1]
-        else:
-            result = arr[1] - arr[0]
+        result = arr[0]-arr[1] if arr[0]>=arr[1] else arr[1]-arr[0]
     elif operator == '/':
         result = arr[0] / arr[1]
     else:

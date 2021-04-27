@@ -1,8 +1,9 @@
+// This is an example of the C language
+
 #include<stdio.h>
 #include<string.h>
 #include<math.h>
 
-// This is an example of the C language
 int main(){
     int arr[2];
 
@@ -23,12 +24,8 @@ int main(){
         result = arr[0] + arr[1];
     else if(strncmp(&operator, "*", 1) == 0)
         result = arr[0] * arr[1];
-    else if(strncmp(&operator,"-",1) == 0){
-        if(arr[0] >= arr[1])
-            result = arr[0] - arr[1];
-        else
-            result = arr[1] - arr[0];
-    }
+    else if(strncmp(&operator,"-",1) == 0)
+        result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
     else if(strncmp(&operator, "/", 1) == 0)
         result = arr[0] / arr[1];
     else{
