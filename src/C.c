@@ -18,35 +18,29 @@ int main(){
     scanf("%*c%c", &operator); // %*c discards preceeding newline
 
     int result;
-    if(strncmp(&operator, "+", 1) == 0){
+    int invalid = 0;
+    if(strncmp(&operator, "+", 1) == 0)
         result = arr[0] + arr[1];
-    }
-    else if(strncmp(&operator, "*", 1) == 0){
+    else if(strncmp(&operator, "*", 1) == 0)
         result = arr[0] * arr[1];
-    }
     else if(strncmp(&operator,"-",1) == 0){
-        if(arr[0] >= arr[1]){
+        if(arr[0] >= arr[1])
             result = arr[0] - arr[1];
-        }
-        else{
+        else
             result = arr[1] - arr[0];
-        }
     }
-    else if(strncmp(&operator, "/", 1) == 0){
+    else if(strncmp(&operator, "/", 1) == 0)
         result = arr[0] / arr[1];
-    }
     else{
         printf("This operator has not been included.");
-        result = INFINITY;
+        invalid = 1;
     }
 
     FILE *handle = fopen("output.txt", "w+");
-    if(result != INFINITY){
+    if(!invalid)
         fprintf(handle, "%d\n", result);
-    }
-    else{
-        fprintf(handle, "None");
-    }
+    else
+        fprintf(handle, "Invalid operation\n");
     fclose(handle);
 
     return 0;

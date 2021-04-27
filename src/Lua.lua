@@ -8,11 +8,11 @@ function main()
         num = io.read()
         table.insert(arr, tonumber(num))
     end
-
     
     print('Enter operation')
     operator = io.read()
     
+    invalid = false;
     if operator == '+' 
     then
         result = arr[1] + arr[2]
@@ -32,13 +32,18 @@ function main()
         result = arr[1] / arr[2]
     else
         print('This operator has not been included.')
-        result = nil
+        invalid = true;
     end
 
     handle = io.open('output.txt', 'w+')
-    handle:write(tostring(result))
-    handle:write('\n')
+    if not invalid
+    then
+        handle:write(tostring(result)..'\n')
+    else
+        handle:write('Invalid operation\n')
+    end
     handle:close()
+
 end
 
 main()

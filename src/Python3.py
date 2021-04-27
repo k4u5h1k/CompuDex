@@ -3,12 +3,13 @@ def main():
     arr = []
 
     for i in range(2):
-        print('Enter number ' + str(i + 1))
+        print(f'Enter number {str(i + 1)}')
         num = int(input())
         arr.append(num)
 
     operator = input('Enter operator\n')
 
+    invalid = False
     if operator == '+':
         result = arr[0] + arr[1]
     elif operator == '*':
@@ -22,12 +23,13 @@ def main():
         result = arr[0] / arr[1]
     else:
         print('This operator has not been included.')
-        result = None
+        invalid = True
 
     with open('output.txt', 'w+') as handle:
-        if result is not None:
-            handle.write(str(result))
-            handle.write('\n')
+        if not invalid:
+            handle.write(f'{str(result)}\n')
+        else:
+            handle.write('Invalid operation\n')
 
 main()
 
