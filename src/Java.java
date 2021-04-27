@@ -1,4 +1,4 @@
-// The is an example of Java language
+// This is an example of Java language
 
 import java.util.Scanner;
 import java.io.FileWriter;
@@ -17,7 +17,7 @@ public class Java {
 
 		System.out.print("Enter operator : ");
 		char op = in.next().charAt(0);
-		boolean flag = true;
+		boolean invalid = false;
 		int result = 0;
 		if(op=='+')
 			result = a[0]+a[1];
@@ -29,10 +29,10 @@ public class Java {
 			result = a[0]/a[1];
 		else {
 			System.out.println("This operator is not included yet");
-			flag = false;
+			invalid = true;
 		}
 
-		if(flag) {
+		if(!invalid) {
 			FileWriter f = new FileWriter("output.txt");
 			f.write(Integer.toString(result));
 			f.close();
