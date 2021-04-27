@@ -1,0 +1,51 @@
+<html>
+    <script>
+        // This is an example of the Javascript language
+        function main(){
+            var arr = []
+
+            for(i = 0;i < 2;i++){
+                num = prompt('Enter number ' + (i+1), '0')
+                arr.push(Number(num))
+            }
+
+            operator = prompt('Enter operator', '+')
+
+
+            if (operator == '+'){
+                result = arr[0] + arr[1]
+            }
+            else if(operator == '*'){
+                result = arr[0] * arr[1]
+            }
+            else if(operator == '-'){
+                if(arr[0] >= arr[1]){
+                    result = arr[0] - arr[1]
+                }
+                else{
+                    result = arr[1] - arr[0]
+                }
+            }
+            else if(operator == '/'){
+                result = arr[0] / arr[1]
+            }
+            else{
+                print('This operator has not been included.')
+                result = null
+            }
+
+            console.log('Javascript running in a browser cannot write')
+            console.log('to file so we can just show an alert.')
+            alert('Result = ' + result);
+        }
+
+        main()
+
+        /*
+        Usage:
+        - To run this file simply open in it your favourite browser and you should
+        see an input prompt.
+        - To see console logs open up your browser's developer console and ensure logs are enabled.
+        */
+    </script>
+</html>
