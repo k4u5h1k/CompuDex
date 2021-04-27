@@ -11,25 +11,26 @@ def main()
   print "Enter operator\n"
   operator = gets.chomp
 
+  invalid = false;
   if operator == '+'
     result = arr[0] + arr[1]
   elsif operator == '*'
     result = arr[0] * arr[1]
   elsif operator == '-'
-    if arr[0] >= arr[1]
-        result = arr[0] - arr[1]
-    else
-        result = arr[1] - arr[0]
-    end
+    result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
   elsif operator == '/'
     result = arr[0] / arr[1]
   else
-    print 'This operator has not been included.'
-    result = nil
+    print "This operator has not been included.\n"
+    invalid = true
   end
 
   File.open("output.txt", "w+") do |handle|
-    handle.syswrite(result.to_s+"\n")
+    if !invalid
+      handle.syswrite(result.to_s+"\n")
+    else
+      handle.syswrite("Invalid operation\n")
+    end
   end
 end
 
