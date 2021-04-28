@@ -9,14 +9,14 @@ int main(){
     
     int num;
     for(int i=0;i<2;i++){
-        cout<<"Enter number "<<i+1<<endl;
-        cin>>num;
+        cout << "Enter number " << i+1 << endl;
+        cin >> num;
         arr[i] = num;
     }
 
     char op;
-    cout<<"Enter operator"<<endl;
-    cin>>op;
+    cout << "Enter operator" << endl;
+    cin >> op;
     
     int result;
     bool invalid = false;
