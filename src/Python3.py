@@ -12,12 +12,8 @@ def main():
     invalid = False
     if operator == '+':
         result = arr[0] + arr[1]
-    elif operator == '*':
-        result = arr[0] * arr[1]
     elif operator == '-':
-        result = arr[0]-arr[1] if arr[0]>=arr[1] else arr[1]-arr[0]
-    elif operator == '/':
-        result = arr[0] / arr[1]
+        result = arr[0] - arr[1]
     else:
         print('This operator has not been included.')
         invalid = True

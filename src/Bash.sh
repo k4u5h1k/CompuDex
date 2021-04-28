@@ -14,10 +14,6 @@ main() {
         result=$(( arr[0]+arr[1] ))
     elif [[ $operator == '-' ]]; then
         result=$(( arr[0]-arr[1] ))
-    elif [[ $operator == '*' ]]; then
-        result=$(( arr[0]*arr[1] ))
-    elif [[ $operator == '/' ]]; then
-        result=$(( arr[0]/arr[1] ))
     else
         result='invalid'
     fi

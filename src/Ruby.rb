@@ -14,12 +14,8 @@ def main()
   invalid = false;
   if operator == '+'
     result = arr[0] + arr[1]
-  elsif operator == '*'
-    result = arr[0] * arr[1]
   elsif operator == '-'
-    result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
-  elsif operator == '/'
-    result = arr[0] / arr[1]
+    result = arr[0] - arr[1]
   else
     print "This operator has not been included.\n"
     invalid = true

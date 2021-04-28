@@ -22,12 +22,8 @@ int main(){
     int invalid = 0;
     if(strncmp(&operator, "+", 1) == 0)
         result = arr[0] + arr[1];
-    else if(strncmp(&operator, "*", 1) == 0)
-        result = arr[0] * arr[1];
     else if(strncmp(&operator,"-",1) == 0)
-        result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
-    else if(strncmp(&operator, "/", 1) == 0)
-        result = arr[0] / arr[1];
+        result = arr[0] - arr[1];
     else{
         printf("This operator has not been included.");
         invalid = 1;

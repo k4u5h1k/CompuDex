@@ -22,12 +22,8 @@ int main(){
     bool invalid = false;
     if(op == '+')
         result = arr[0] + arr[1];
-    else if(op == '*')
-        result = arr[0] * arr[1];
     else if(op == '-')
-        result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
-    else if(op == '/')
-        result = arr[0] / arr[1];
+        result = arr[0] - arr[1];
     else{
         printf("This operator has not been included.");
         invalid = true;
