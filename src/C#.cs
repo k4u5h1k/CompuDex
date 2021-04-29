@@ -21,11 +21,7 @@ class Program
     if(c=='+') {
         result = a[0]+a[1]; 
     } else if(c=='-') {
-        result = (a[0]>a[1])?(a[0]-a[1]):(a[1]-a[0]);
-    } else if(c=='*') {
-        result = a[0]*a[1];
-    } else if(c=='/') {
-        result = a[0]/a[1];
+        result = a[0]-a[1];
     } else {
         invalid = true;
         Console.WriteLine("The operator has not been included");

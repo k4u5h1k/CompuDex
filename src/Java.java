@@ -22,11 +22,7 @@ public class Java {
 		if(op=='+')
 			result = a[0]+a[1];
 		else if(op=='-')
-			result = (a[0]>=a[1])?(a[0]-a[1]):(a[1]-a[0]);
-		else if(op=='*')
-			result = a[0]*a[1];
-		else if(op=='/')
-			result = a[0]/a[1];
+			result = a[0]-a[1];
 		else {
 			System.out.println("This operator is not included yet");
 			invalid = true;
