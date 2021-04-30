@@ -9,25 +9,21 @@ int main(){
     
     int num;
     for(int i=0;i<2;i++){
-        cout<<"Enter number "<<i+1<<endl;
-        cin>>num;
+        cout << "Enter number " << i+1 << endl;
+        cin >> num;
         arr[i] = num;
     }
 
     char op;
-    cout<<"Enter operator"<<endl;
-    cin>>op;
+    cout << "Enter operator" << endl;
+    cin >> op;
     
     int result;
     bool invalid = false;
     if(op == '+')
         result = arr[0] + arr[1];
-    else if(op == '*')
-        result = arr[0] * arr[1];
     else if(op == '-')
-        result = arr[0] >= arr[1]?arr[0]-arr[1]:arr[1]-arr[0];
-    else if(op == '/')
-        result = arr[0] / arr[1];
+        result = arr[0] - arr[1];
     else{
         printf("This operator has not been included.");
         invalid = true;

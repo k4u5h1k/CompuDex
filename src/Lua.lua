@@ -16,20 +16,9 @@ function main()
     if operator == '+' 
     then
         result = arr[1] + arr[2]
-    elseif operator == '*' 
-    then
-        result = arr[1] * arr[2]
     elseif operator == '-' 
     then
-        if arr[1] >= arr[2]
-        then
-            result = arr[1] - arr[2]
-        else
-            result = arr[2] - arr[1]
-        end
-    elseif operator == '/'
-    then
-        result = arr[1] / arr[2]
+        result = arr[1] - arr[2]
     else
         print('This operator has not been included.')
         invalid = true;
