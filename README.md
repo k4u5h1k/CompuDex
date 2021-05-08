@@ -1,5 +1,5 @@
 # CompuDex
-A pokédex of programming languages.
+An index of programming languages.
 
 ## Script Format
 ```
