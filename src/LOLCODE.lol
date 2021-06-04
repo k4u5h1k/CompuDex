@@ -20,10 +20,8 @@ HOW IZ I main
     BOTH SAEM operator AN "+", O RLY?
         YA RLY
             result R SUM OF arr'Z SRS 0 AN arr'Z SRS 1
-
         MEBBE BOTH SAEM operator AN "-"
             result R DIFF OF arr'Z SRS 0 AN arr'Z SRS 1
-
         NO WAI
             VISIBLE "Invalid operation"
             invalid R WIN
@@ -47,7 +45,8 @@ OBTW
     To use lci (LOLCODE interpreter) run,
     1. git clone -b future https://github.com/justinmeza/lci.git
     2. cd lci
-    3. python3 install.py
+    3. For linux, run python3 install.py for windows, follow the official
+        guide at https://github.com/justinmeza/lci#installation-on-windows
 
     Then to run this script use lci LOLCODE.lol
 TLDR
