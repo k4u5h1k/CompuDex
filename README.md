@@ -1,5 +1,5 @@
 # CompuDex
-An index of programming languages.
+An index of popular programming languages.
 
 ## Script Format
 ```
